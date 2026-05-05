@@ -1,0 +1,208 @@
+:root {
+    --dark-blue: #0b3c5d;
+    --primary-blue: #1d70b8;
+    --light-blue: #4da6ff;
+    --very-light-blue: #e6f2ff;
+    --accent-blue: #2a9df4;
+    --white: #ffffff;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--very-light-blue);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* LOGIN */
+.login-section {
+    text-align: center;
+    padding: 20px;
+    background: var(--white);
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* title left, nav right */
+    padding: 15px 30px;
+}
+
+/* Title */
+.nav h1 {
+    margin: 0;
+}
+
+/* Navbar menu */
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav .logout {
+    margin-left: 10px;
+}
+
+.nav li {
+    margin-left: 20px;
+}
+
+.nav a {
+    color: var(--dark-blue);
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+.nav a:hover {
+    background-color: var(--light-blue);
+    color: white;
+}
+
+/* ACTIVE NAV */
+.nav a.active {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+/* LOGOUT */
+.nav a.logout {
+    background-color: red;
+    color: white;
+}
+
+.nav a.logout:hover {
+    background-color: darkred;
+}
+
+/* BANNER */
+.banner {
+    height: 400px;
+    background: linear-gradient(rgba(11, 60, 93, 0.7), rgba(11, 60, 93, 0.7)),
+                url('../images/background.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-text h2 {
+    color: white;
+}
+
+.inventory {
+    color: var(--accent-blue);
+}
+
+/* PRODUCT GRID */
+.merch {
+    padding: 40px;
+}
+
+.merch-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* CARD */
+.merch-items {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.merch-items:hover {
+    transform: translateY(-5px);
+}
+
+.edit-btn {
+    background-color: #1d70b8;
+    color: white;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+/* BUTTON */
+button, input[type="submit"] {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: var(--accent-blue);
+}
+
+/* FORM */
+.reservation {
+    padding: 40px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary-blue);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .merch-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .merch-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+.contact {
+    padding: 40px;
+    background-color: var(--very-light-blue);
+    text-align: center;
+}
+
+.contact h2 {
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.contact p {
+    color: var(--dark-blue);
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
